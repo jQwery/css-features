@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="section">
+        <div id="container" class="container">
+            <div class="card"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>
+            <div class="card"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>
+            <div class="card"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>
+            <div class="card"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>
+            <div class="card"><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>
+            <div class="card "><img src="https://codyhouse.co/demo/3d-animated-mockup/img/cd-app-image.png" alt=""></div>
+        </div>
+    </div>
+    <script>
+        const cards = document.getElementsByClassName("card");
+        for( let card of cards){
+             card.addEventListener("click", event =>{
+                event.target.offsetParent.classList.toggle("card-full");
+                document.getElementById("container").classList.toggle("container-origin");
+            })
+        }
+    </script>
+</body>
+</html>

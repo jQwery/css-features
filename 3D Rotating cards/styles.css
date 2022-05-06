@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    background-color: #3d385a;
+}
+
+.section{
+    perspective: 1000px;
+    /* Чтобы была перспектива у дочерних элементов */
+}
+
+.container{
+    width: 680px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    transition: 1s;
+     transform: rotateX(50deg) rotateY(20deg) rotateZ(-45deg);
+    transform-style: preserve-3d;
+    /* Карточки выезжают вверх */
+}
+
+.container-origin{
+     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+img{
+    max-width: 100%;
+}
+
+.card{
+    width: 200px;
+    margin: 10px;
+    transition: .4s;
+}
+
+.card-full{
+    width: 100%;
+    position: absolute;
+    transition: .4s;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: translateZ(20px);
+}
